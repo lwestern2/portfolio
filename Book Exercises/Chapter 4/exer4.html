@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+ <title>Book Exercises</title>
+ <script>
+  function deepEqual(a, b) {
+   if (a === b) return true;
+
+   if (a == null || typeof a != "object") return false;
+   if (b == null || typeof b != "object") return false;
+
+   let obA = Object.keys(a);
+   let obB = Object.keys(b);
+
+   if (obA.length != obB.length) return false;
+
+   for (let key of obA) {
+    if (!obB.includes(key)) return false;
+    if (!deepEqual(a[key], b[key])) return false;
+   }
+
+   return true;
+  }
+
+  let obj = {
+   here: {
+    is: "an"
+   },
+   object: 2
+  };
+  console.log(deepEqual(obj, obj));
+  console.log(deepEqual(obj, {
+   here: 1,
+   object: 2
+  }));
+  console.log(deepEqual(obj, {
+   here: {
+    is: "an"
+   },
+   object: 2
+  }));
+
+ </script>
+</head>
+
+<body>
+</body>
+
+</html>

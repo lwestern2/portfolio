@@ -1,0 +1,101 @@
+/*Styles for the rock paper scissors game. Change to scss later*/
+
+@import url('https://fonts.googleapis.com/css?family=Asap:400,700');
+
+/*9933FF*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(153, 51, 255, .7));
+    color: #404041;
+}
+
+header {
+    padding: 20px;
+}
+
+header > h1 {
+    color: #404041;
+    text-align: center;
+    font-family: Asap, sans-serif;
+    font-size: 5em;
+}
+
+.score-board {
+    border: 5px solid #404041;
+    border-radius: 7px;
+    text-align: center;
+    width: 30vw;
+    margin: 2vw auto;
+    padding: px 20px;
+    font-size: 8em;
+    font-family: Asap, sans-serif;
+    position: relative;
+}
+
+#comp-score, #user-score {
+    font-size: 112px;
+}
+
+.badge {
+    background-color: #404041;
+    color: #FFF;
+    font-size: 28px;
+    padding: 3px 10px;
+    font-family: Asap, sans-serif;
+}
+
+#user-label {
+    position: absolute;
+    top: 43px;
+    left: -40px;
+}
+
+#comp-label {
+    position: absolute;
+    top: 43px;
+    right: -50px;
+}
+
+.result p {
+    font-size: 4em;
+    color: #404041;
+    text-align: center;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+.choices {
+    margin: 50px 0;
+    display: flex;
+} 
+
+.choice {
+    
+}
+
+.choice img {
+/*    width: 20vw;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
