@@ -5,6 +5,7 @@ let compScore = 0;
 //DOM variables
 const userScore_span = document.getElementById("user-score");
 const compScore_span = document.getElementById("comp-score");
+const resetButton = document.getElementById("reset");
 const scoreBoard_div = document.querySelector(".score-board");
 const message_p = document.querySelector(".action-message > p");
 const rock_div = document.getElementById("r");
@@ -42,9 +43,9 @@ function win(user, comp) {
 }
 
 //what to do when the user loses
-function lose() {
- //increase user score
- userScore++;
+function lose(user, comp) {
+ //increase comp score
+ compScore++;
 
  //show user score on screen
  userScore_span.innerHTML = userScore;
@@ -53,12 +54,34 @@ function lose() {
  compScore_span.innerHTML = compScore;
 
  //show message in messsage div
- message_p.innerHTML = `You win!<br>${convertToWord(user)} beats ${convertToWord(comp)}.`;
+ message_p.innerHTML = `You lose...<br>${convertToWord(user)} loses to ${convertToWord(comp)}.`;
 }
 
 //what to do when it is a draw
-function draw() {
- console.log("draw");
+function draw(user, comp) {
+ //no score increment as no one won
+ //show user score on screen
+ userScore_span.innerHTML = userScore;
+
+ //update comp score
+ compScore_span.innerHTML = compScore;
+
+ //show message in messsage div
+ message_p.innerHTML = `It's a draw.<br>${convertToWord(user)} matches ${convertToWord(comp)}.`;
+}
+
+function reset() {
+ //reset user score
+ userScore = 0;
+ userScore_span.innerHTML = userScore;
+
+ //reset comp score
+ compScore = 0;
+ compScore_span.innerHTML = compScore;
+
+ //reset the message
+ message_p.innerHTML = "To play pick<br>Rock, Paper, or Scissors.";
+
 }
 
 //function game that takes in user input (choice) compares (switch statment) it to the computer and then sends the result make to the message
@@ -86,18 +109,19 @@ function game(userChoice) {
 function main() {
  //Event listeners on each button
  rock_div.addEventListener('touchend', function () {
-  // console.log('hey you clicked on rock');
   game("r");
  })
 
  paper_div.addEventListener('touchend', function () {
-  // console.log('hey you clicked on paper');
   game("p");
  })
 
  scissor_div.addEventListener('touchend', function () {
-  // console.log('hey you clicked on scissors');
   game("s");
+ })
+
+ resetButton.addEventListener('touchend', function () {
+  reset();
  })
 }
 
