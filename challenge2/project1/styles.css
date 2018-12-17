@@ -1,0 +1,98 @@
+body {
+    background: #b3000cde;
+    text-align: center;
+    font-family: cursive;
+    background-image: url(assets/christmas-tree.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 60vw;
+}
+
+h1 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 4em;
+}
+
+p {
+    font-size: 1.5em;
+    color: #FFf;
+    margin: 1vw 0;
+}
+
+#third {
+    margin-bottom: 3vw;
+}
+
+.inputField {
+    display: flex;
+    justify-content: space-around;
+}
+
+input {
+    border-radius: 10px;
+    min-width: 65%;
+    padding: 10px;
+    border: none;
+    width: 85vw;
+    height: 5vw;
+    font-size: 2em;
+}
+
+#enter {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #000;
+    background-color: #FFF;
+    transition: all 0.75s ease;
+}
+
+#present {
+    width: 7vw;
+}
+
+#enter:hover {
+    background-color: #00b32c;
+}
+
+/*list items*/
+
+ul {
+    text-align: left;
+    padding: 0;
+    width: 90vw;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+li {
+    list-style: none;
+    padding: 10px 20px;
+    color: #ffffff;
+    text-transform: capitalize;
+    border: 2px solid #93141dcf;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background: #71030387;
+    transition: all 0.75s ease;
+}
+
+li > button {
+    background: none;
+    border: none;
+    float: right;
+    color: #000000;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.done {
+    background: #00b32ccf !important;
+    color: #040404;
+}
+
+.delete {
+    display: none;
+}

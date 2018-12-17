@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Christmas Wish List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="main">
+        <h1>My Christmas Wish List</h1>
+        <div class="steps">
+            <p id="first">Enter text into the input field to add items to your list.</p>
+            <p id="second">Click the item to mark it as complete.</p>
+            <p id="third">Click the "X" to remove the item from your list.</p>
+        </div>
+
+        <div class="inputField">
+            <input id="userInput" type="text" name="textfield" placeholder="New item..." maxlength="27">
+            <button id="enter"><img src="assets/gift.png" id="present"></button>
+        </div>
+
+        <!-- Empty List -->
+        <div class="listItems">
+            <ul class="items">
+            </ul>
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>
