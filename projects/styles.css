@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 5em;
+    background-color: darkcyan;
+    color: #fff;
+    padding: 1vw;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    text-decoration: none;
+    color: #FFF;
+    background-color: darkcyan;
+    font-size: 3em;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 1vw;
+}
+
+
+button:hover {
+    color: darkcyan;
+    background-color: #FFF;
+}

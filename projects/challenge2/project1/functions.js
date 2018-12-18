@@ -41,12 +41,28 @@ function addListAfterClick() {
 }
 
 function addListAfterKeypress(event) {
-    if (inputLength() > 0 && event.which === 13) { 
+    if (inputLength() > 0 && event.which === 13) {
         createListElement();
     }
 }
 
+/*download pdf*/
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#download').click(function () {
+    doc.fromHTML($('#listItems').html(), 15, 15, {
+        'width': 170,
+        'elementHandlers': specialElementHandlers
+    });
+    doc.save('ChristmasList.pdf');
+});
+
+
 enterButton.addEventListener("touchend", addListAfterClick);
 
 input.addEventListener("keypress", addListAfterKeypress);
-

@@ -2,10 +2,11 @@ body {
     background: #b3000cde;
     text-align: center;
     font-family: cursive;
+    height: 100vh;
     background-image: url(assets/christmas-tree.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 60vw;
+    background-size: contain;
+    background-position: center bottom;
 }
 
 h1 {
@@ -20,7 +21,7 @@ p {
     margin: 1vw 0;
 }
 
-#third {
+#fourth {
     margin-bottom: 3vw;
 }
 
@@ -35,8 +36,8 @@ input {
     padding: 10px;
     border: none;
     width: 85vw;
-    height: 5vw;
-    font-size: 2em;
+    height: 7vw;
+    font-size: 3em;
 }
 
 #enter {
@@ -86,6 +87,21 @@ li > button {
     color: #000000;
     font-weight: 800;
     font-size: 2em;
+}
+
+#download {
+    font-size: 4em;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    color: #000;
+    margin-top: 1vw;
+    background-color: #FFF;
+    transition: all 0.75s ease;
+}
+
+#download:hover {
+    background-color: #00b32c;
 }
 
 .done {

@@ -8,7 +8,6 @@
     <meta name="author" content="Leah Western">
     <link rel="stylesheet" href="port-style.css">
 
-    <!-- The statement below is for responsive behavior-->
     <meta name="viewport" content="width=device-width">
 </head>
 
@@ -18,13 +17,16 @@
     </header>
 
     <main>
+        <p>Please change to a mobile view.</p>
         <p>Hello, I am Leah Western. I am a Web Development major at Brigham Young University Idaho. This is my portfolio.</p>
 
         <h2>Projects</h2>
         <ul>
-            <li><a href="Challenge1/rps.html" title="View Rock Paper Scissors Game">Rock Paper Scissors Game(mobile view only)</a></li>
-            <li><a href="challenge2/project1/index.html" title="View Chirstmas List"> Christmas Wish List (mobile view only)</a></li>
-            <li><a href="challenge2/project2/index.html" title="View Tip calc"> Tip Calculator (mobile view only)</a></li>
+            <button id="pro" onclick="sendPro()" class="button">Projects</button>
+            <div id="pro-content">
+
+            </div>
+
             <li><a href="book-exercises/index.html" title="View book exercises">Book Excerises</a></li>
         </ul>
     </main>
@@ -33,6 +35,8 @@
         <small>Last Updated: 17 December 2018</small>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="ajax.js"></script>
 </body>
 
 </html>
